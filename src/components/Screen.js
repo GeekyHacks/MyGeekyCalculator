@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Screen = (total, next) => {
+const Screen = ({ total, next }) => {
   let display = '';
   if (next) {
     display = next;
@@ -13,7 +13,7 @@ const Screen = (total, next) => {
   return <div id="CalcInput">{display}</div>;
 };
 
-Screen.prototype = {
+Screen.propTypes = {
   total: PropTypes.string.isRequired,
   next: PropTypes.string.isRequired,
 };

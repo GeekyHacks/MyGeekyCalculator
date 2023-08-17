@@ -59,9 +59,9 @@ const Operators = ({ value, onClick }) => (
   </button>
 );
 
-const Zero = ({ onClick, value }) => (
+const Zero = ({ value, onClick }) => (
   <button id="zero" type="button" onClick={onClick}>
-    {onClick} {value}
+    {value}
   </button>
 );
 
