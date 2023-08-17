@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MyGeekyCalculator/static/css/main.2c469f7c.css",
+    "main.js": "/MyGeekyCalculator/static/js/main.be540ae3.js",
+    "index.html": "/MyGeekyCalculator/index.html",
+    "main.2c469f7c.css.map": "/MyGeekyCalculator/static/css/main.2c469f7c.css.map",
+    "main.be540ae3.js.map": "/MyGeekyCalculator/static/js/main.be540ae3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c469f7c.css",
+    "static/js/main.be540ae3.js"
+  ]
+}
