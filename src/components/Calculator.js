@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 const Calculator = () => (
   <div id="CalculatorContainer">
     <input type="number" placeholder="0" id="CalcInput" maxLength={9} onWheel="blur()" />

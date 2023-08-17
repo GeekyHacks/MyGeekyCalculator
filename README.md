@@ -16,7 +16,7 @@
 - [GEEKY CALCULATOR](#GeekyCalculator)
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 GEEKY CALCULATOR< ](#GeekyCalculator)
-- [📖 GEEKY CALCULATOR< ](#GeekyCalculator)
+- [🚀 Live Demo ](#-live-demo-)
   - [🛠 Built With HTML, CSS and JavaScript](#-built-with-html-css-and-javascript)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -38,7 +38,9 @@
 **GEEKY CALCULATOR<e**
 In this project I will be making a calculator app using react
 
-# 📖 GEEKY CALCULATOR <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://geekyhacks.github.io/MyGeekyCalculator/)
 
 ## 🛠 Built With <a name="built-with">HTML, CSS and JavaScript</a>
 
