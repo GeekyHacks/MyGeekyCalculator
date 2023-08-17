@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 body {
   background: #71a5de;
   font-size: 14px;
@@ -48,11 +47,9 @@ input {
   padding: 0.1rem 0.6rem;
   color: #aecbeb;
 }
-
 #CalcInput:active {
   border: none;
 }
-
 #CalcInput:focus {
   outline: 0;
 }
@@ -70,12 +67,10 @@ button {
   font-size: 1rem;
   flex: 0 1 25%;
 }
-
 button:active {
   transform: scale(0.96);
   background: #72bbce !important;
 }
-
 button:focus {
   outline: 0;
 }
@@ -102,7 +97,6 @@ button:focus {
     padding-left: calc(25% - 120px);
     padding-right: calc(25% - 120px);
   }
-
   .App {
     padding-left: calc(25% - 120px);
     padding-right: calc(25% - 120px);
@@ -110,7 +104,6 @@ button:focus {
     width: 300px;
   }
 }
-
 @media (min-width: 999px) {
   body {
     padding: 13rem 10rem;
