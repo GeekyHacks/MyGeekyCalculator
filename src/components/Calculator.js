@@ -1,54 +1,47 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
-// import operate from '../logic/operate.js';
-const Calculator = () => {
-  const [inputValue, setInputValue] = useState('');
+import Screen from './Screen';
 
-  const handleNumberClick =  (value) => {
-    if (value === '=') {
-      try {
-        const result =  calculate(inputValue);
-        console.log(inputValue);
-         setInputValue(result.toString());
-      } catch (error) {
-        setInputValue('Error');
-      }
-    } else {
-      setInputValue((prevValue) => prevValue + value);
-    }
-  };
-  // const handleOperatorClick = (prevValue, value, operation) => {
-  //   operate(prevValue, value, operation);
-  // };
-  const handleClear = () => {
-    setInputValue('0');
-  };
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
   return (
     <div id="CalculatorContainer">
-      <input type="text" value={inputValue} id="CalcInput" readOnly />{' '}
+      <Screen total={state.total} next={state.next} />
       <div id="Btns">
-        <button type="submit" onClick={() => handleClear('0')}>
+        <button type="button" onClick={() => setState(calculate(state, 'AC'))}>
           AC
         </button>
-        <button type="submit">+/-</button>
-        <button type="submit">%</button>
-        <Operators value="/" onClick={() => handleNumberClick('/')} />
-        <Numbers value="7" onClick={() => handleNumberClick('7')} />
-        <Numbers value="8" onClick={() => handleNumberClick('8')} />
-        <Numbers value="9" onClick={() => handleNumberClick('9')} />
-        <Operators value="x" onClick={() => handleNumberClick('x')} />
-        <Numbers value="4" onClick={() => handleNumberClick('4')} />
-        <Numbers value="5" onClick={() => handleNumberClick('5')} />
-        <Numbers value="6" onClick={() => handleNumberClick('6')} />
-        <Operators value="-" onClick={() => handleNumberClick('-')} />
-        <Numbers value="1" onClick={() => handleNumberClick('1')} />
-        <Numbers value="2" onClick={() => handleNumberClick('2')} />
-        <Numbers value="3" onClick={() => handleNumberClick('3')} />
-        <Operators value="+" onClick={() => handleNumberClick('+')} />
-        <Zero value="0" onClick={() => handleNumberClick('0')} />
-        <button type="submit">.</button>
-        <Operators value="=" onClick={() => handleNumberClick('=')} />
+        <button type="button" onClick={() => setState(calculate(state, '+/-'))}>
+          +/-
+        </button>
+        <button type="button" onClick={() => setState(calculate(state, '%'))}>
+          %
+        </button>
+        <Operators value="÷" onClick={() => setState(calculate(state, '÷'))} />
+        <Numbers value="7" onClick={() => setState(calculate(state, '7'))} />
+        <Numbers value="8" onClick={() => setState(calculate(state, '8'))} />
+        <Numbers value="9" onClick={() => setState(calculate(state, '9'))} />
+        <Operators value="x" onClick={() => setState(calculate(state, 'x'))} />
+        <Numbers value="4" onClick={() => setState(calculate(state, '4'))} />
+        <Numbers value="5" onClick={() => setState(calculate(state, '5'))} />
+        <Numbers value="6" onClick={() => setState(calculate(state, '6'))} />
+        <Operators value="-" onClick={() => setState(calculate(state, '-'))} />
+        <Numbers value="1" onClick={() => setState(calculate(state, '1'))} />
+        <Numbers value="2" onClick={() => setState(calculate(state, '2'))} />
+        <Numbers value="3" onClick={() => setState(calculate(state, '3'))} />
+        <Operators value="+" onClick={() => setState(calculate(state, '+'))} />
+        <Zero value="0" onClick={() => setState(calculate(state, '0'))} />
+
+        <button type="button" onClick={() => setState(calculate(state, '.'))}>
+          .
+        </button>
+        <Operators value="=" onClick={() => setState(calculate(state, '='))} />
       </div>
     </div>
   );
@@ -67,15 +60,10 @@ const Operators = ({ value, onClick }) => (
 );
 
 const Zero = ({ onClick, value }) => (
-  <button id="zero" type="submit" onClick={onClick}>
+  <button id="zero" type="button" onClick={onClick}>
     {onClick} {value}
   </button>
 );
-
-// Calculator.propTypes = {
-//   calculate: PropTypes.func.isRequired,
-//   operate: PropTypes.func.isRequired,
-// };
 
 Numbers.propTypes = {
   value: PropTypes.string.isRequired,
@@ -93,61 +81,3 @@ Zero.propTypes = {
 };
 
 export default Calculator;
-
-// import PropTypes from 'prop-types';
-// import React from 'react';
-// import calculate  from '../logic/calculate.js';
-// import operate from '../logic/operate.js';
-// const Calculator = () => (
-//   <div id="CalculatorContainer">
-//     <input type="number" placeholder="0" id="CalcInput" maxLength={9} />
-//     <div id="Btns">
-//       <button type="submit">AC</button>
-//       <button type="submit">+/-</button>
-//       <button type="submit">%</button>
-//       <Operators value="/" />
-//       <Numbers value="7" />
-//       <Numbers value="8" />
-//       <Numbers value="9" />
-//       <Operators value="x" />
-//       <Numbers value="4" />
-//       <Numbers value="5" />
-//       <Numbers value="6" />
-//       <Operators value="-" />
-//       <Numbers value="1" />
-//       <Numbers value="2" />
-//       <Numbers value="3" />
-//       <Operators value="+" />
-//       <Zero value="0" />
-//       <button type="submit">.</button>
-//       <Operators value="=" />
-//     </div>
-//   </div>
-
-// );
-
-// const Numbers = ({ value }) => <button type="submit">{value}</button>;
-
-// const Operators = ({ value }) => (
-//   <button className="operator" type="submit">
-//     {value}
-//   </button>
-// );
-
-// const Zero = ({ value }) => (
-//   <button id="zero" type="submit">
-//     {value}
-//   </button>
-// );
-
-// Numbers.propTypes = {
-//   value: PropTypes.string.isRequired,
-// };
-// Operators.propTypes = {
-//   value: PropTypes.string.isRequired,
-// };
-// Zero.propTypes = {
-//   value: PropTypes.string.isRequired,
-// };
-
-// export default Calculator;
