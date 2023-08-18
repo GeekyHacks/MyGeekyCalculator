@@ -1,31 +1,34 @@
 import Calculator from './Calculator';
 
 const Header = () => {
-  return (
+  const result = (
     <div>
       <header>
         <nav>
-          <div class="navBar">
+          <div className="navBar">
             <h2>Geeky Calculator</h2>
             <div>
-              <a href="#" class="link" id="listBtn">
+              <a className="link" id="listBtn" href={Calculator}>
                 List
-              </a>{' '}
-              <span>|</span>{' '}
-              <a class="link" id="addNewBook" href="#">
+              </a>
+
+              <span>|</span>
+
+              <a className="link" id="addNewBook" href={Calculator}>
                 Calculator
               </a>
               <span>|</span>
-              <a class="link" id="contactBtn" href="#">
+              <a href={Calculator} className="link" id="contactBtn">
                 Contact
               </a>
             </div>
           </div>
-          <p class="dayDate"></p>
         </nav>
       </header>
     </div>
   );
+
+  return result;
 };
 
 export default Header;

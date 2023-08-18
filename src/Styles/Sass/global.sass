@@ -33,6 +33,21 @@ $Qlpadding: calc( 25% - 120px )
 
     &:focus
         outline: 0
+@mixin transparentLink
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    color: $fontColor !important
+
+@mixin link
+    transition: all 0.5s
+    opacity: .6
+    color: blue
+    cursor: pointer
+    &:active
+        @include transparentLink
+
+    &:focus
+        outline: 0
 
 @mixin oneFiveGrid
     display: grid

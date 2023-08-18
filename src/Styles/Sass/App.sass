@@ -1,22 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
 @import global
 
+*
+    margin: 0
+    padding: 0
 body
     background: #71a5de
     font-size: 14px
-    padding: 2rem
+    padding: .2rem
     @include columnFlex
     justify-content: center
-    align-items: center
+    align-items: stretch
+    white-space: nowrap
+    a, h2, span,button, h3
+        color: $fontColor
+        font-weight: 600
+        font-size: 1em
 
 .App
-    width: 270px
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    gap: 3rem
+
+nav
+    @include columnFlex
+    padding: .2rem
+    gap: .2rem
+    justify-content: center
+    align-self: stretch
+
+.navBar
+    @include rowFlex
+    justify-content: space-between
+    align-items: center
+    border: 2px solid $secondarycolor
+    padding: .2rem .5rem
+    align-self: stretch
+
+    div
+        @include rowFlex
+        align-items: center
+        // margin-right: 1.5rem
+        gap: 1rem
+
+// .dayDate
+//     @include smlInterP
+//     font-weight: 600
+//     align-self: flex-end
+//     margin-right: .4rem
 
 #CalculatorContainer
-    height: 300px
+    width: 250px
+    height: 250px
     @include columnFlex
     justify-content: stretch
     align-items: stretch
+    align-self: center
     box-shadow: $box-shadow
     background-color: #aecbeb
     border-radius: 4px
@@ -28,14 +68,12 @@ body
     font-weight: 600
 
 #CalcInput
-    flex: .2
-    font-size: 1rem
+    flex: 0 1 11%
     text-align: right
     border-radius: 4px
-    height: 1.8rem
     border: none
     background: #335c81
-    padding: 0.1rem 0.6rem
+    padding: .5rem
     color: #aecbeb
 
     &:active
@@ -46,12 +84,10 @@ body
 
 button
     @include button
-    font-size: 1rem
     flex: 0 1 25%
 
 #Btns
     flex: 1
-    font-size: 1rem
     display: flex
     flex-wrap: wrap
 
@@ -61,20 +97,24 @@ button
 #zero
     flex: 0 1 50%
 
+footer
+    position: relative
+    top: auto
+    bottom: 0
+    padding: .2rem
+    border: 2px solid $secondarycolor
+    a
+        @include link
+
 @media ( min-width: 768px  )
     body
-        padding: 10rem 8rem
         font-size: 18px
-        padding-left: $Qlpadding
-        padding-right: $Qrpadding
+    .navBar
+        padding: .2rem 1.5rem
 
-    .App
-        padding-left: $Qlpadding
-        padding-right: $Qrpadding
-        height: 800px
-        width: 300px
+    #CalculatorContainer
+        margin: 3rem
 
 @media (min-width: 999px)
     body
-        padding: 13rem 10rem
-        font-size: 50px
+        font-size: 25px
