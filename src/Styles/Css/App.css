@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +14,7 @@ body {
   align-items: stretch;
   white-space: nowrap;
 }
-
-body h2,
-body span,
-body h3 {
+body h2, body span, body h3 {
   color: #002d67;
   font-weight: 600;
   font-size: 1em;
@@ -35,12 +31,10 @@ button {
   font-weight: 600;
   font-size: 1em;
 }
-
 button:active {
   transform: scale(0.96);
   background: #72bbce !important;
 }
-
 button:focus {
   outline: 0;
 }
@@ -80,7 +74,6 @@ nav {
   padding: 0.2rem 0.5rem;
   align-self: stretch;
 }
-
 .navBar div {
   display: flex;
   flex-direction: row;
@@ -139,11 +132,9 @@ nav {
   padding: 0.5rem;
   color: #aecbeb;
 }
-
 #CalcInput:active {
   border: none;
 }
-
 #CalcInput:focus {
   outline: 0;
 }
@@ -156,13 +147,11 @@ nav {
   border: none;
   background: none !important;
 }
-
 .link:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
-
 .link:focus {
   outline: 0;
 }
@@ -188,7 +177,6 @@ footer {
   padding: 0.2rem;
   border: 2px solid #72bbce;
 }
-
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
@@ -196,13 +184,11 @@ footer a {
   cursor: pointer;
   border: none;
 }
-
 footer a:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
-
 footer a:focus {
   outline: 0;
 }
@@ -211,18 +197,17 @@ footer a:focus {
   body {
     font-size: 18px;
   }
-
   .navBar {
     padding: 0.2rem 1.5rem;
   }
-
   #CalculatorContainer {
     margin: 3rem;
   }
 }
-
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
 }
+
+/*# sourceMappingURL=App.css.map */
