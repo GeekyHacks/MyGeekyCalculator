@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+
 $InterFont: "Inter", sans-serif
 $primarycolor: #c2e2ea
 $secondarycolor: #72bbce
@@ -19,13 +21,13 @@ $Qlpadding: calc( 25% - 120px )
 @mixin button
     transition: all 0.5s
     border-radius: 4px
-    font-weight: 600
+    // font-weight: 600
     color: $fontColor !important
     background-color: $primarycolor !important
-    padding: 4px
+    // padding: 4px
     cursor: pointer
     text-align: center
-    border: 1px solid rgba($fontColor, 0.4)
+    // border: 1px solid rgba($fontColor, 0.4)
 
     &:active
         transform: scale(0.96)
@@ -43,6 +45,8 @@ $Qlpadding: calc( 25% - 120px )
     opacity: .6
     color: blue
     cursor: pointer
+    border: none
+    background-color: none
     &:active
         @include transparentLink
 

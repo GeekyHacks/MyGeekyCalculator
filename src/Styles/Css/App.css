@@ -14,7 +14,7 @@ body {
   align-items: stretch;
   white-space: nowrap;
 }
-body a, body h2, body span, body button, body h3 {
+body h2, body span, body button, body h3, body .quote {
   color: #002d67;
   font-weight: 600;
   font-size: 1em;
@@ -53,6 +53,33 @@ nav {
   gap: 1rem;
 }
 
+.quote {
+  white-space: break-spaces;
+  margin: 1rem 3rem;
+  font-style: italic;
+}
+
+.author {
+  margin-top: 0.3rem;
+  font-weight: 700;
+  font-style: oblique;
+}
+
+#mainSect {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.ContactComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+
 #CalculatorContainer {
   width: 250px;
   height: 250px;
@@ -60,7 +87,6 @@ nav {
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  align-self: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   background-color: #aecbeb;
   border-radius: 4px;
@@ -92,13 +118,10 @@ nav {
 button {
   transition: all 0.5s;
   border-radius: 4px;
-  font-weight: 600;
   color: #002d67 !important;
   background-color: #c2e2ea !important;
-  padding: 4px;
   cursor: pointer;
   text-align: center;
-  border: 1px solid rgba(0, 45, 103, 0.4);
   flex: 0 1 25%;
 }
 button:active {
@@ -106,6 +129,24 @@ button:active {
   background: #72bbce !important;
 }
 button:focus {
+  outline: 0;
+}
+
+.link {
+  transition: all 0.5s;
+  opacity: 0.6;
+  color: blue;
+  cursor: pointer;
+  border: none;
+  background-color: none;
+  background: none !important;
+}
+.link:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #002d67 !important;
+}
+.link:focus {
   outline: 0;
 }
 
@@ -135,6 +176,8 @@ footer a {
   opacity: 0.6;
   color: blue;
   cursor: pointer;
+  border: none;
+  background-color: none;
 }
 footer a:active {
   -webkit-background-clip: text;

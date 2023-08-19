@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
 @import global
 
 *
@@ -12,7 +11,7 @@ body
     justify-content: center
     align-items: stretch
     white-space: nowrap
-    a, h2, span,button, h3
+    h2, span,button, h3,.quote
         color: $fontColor
         font-weight: 600
         font-size: 1em
@@ -49,6 +48,26 @@ nav
 //     font-weight: 600
 //     align-self: flex-end
 //     margin-right: .4rem
+.quote
+
+    white-space: break-spaces
+    margin: 1rem 3rem
+    font-style: italic
+.author
+    margin-top: .3rem
+    font-weight: 700
+    font-style: oblique
+
+#mainSect
+    @include columnFlex
+    justify-content: stretch
+    align-items: center
+
+.ContactComponent
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    margin: 3rem
 
 #CalculatorContainer
     width: 250px
@@ -56,7 +75,6 @@ nav
     @include columnFlex
     justify-content: stretch
     align-items: stretch
-    align-self: center
     box-shadow: $box-shadow
     background-color: #aecbeb
     border-radius: 4px
@@ -85,6 +103,10 @@ nav
 button
     @include button
     flex: 0 1 25%
+
+.link
+    @include link
+    background: none !important
 
 #Btns
     flex: 1
