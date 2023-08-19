@@ -42,7 +42,6 @@ function App() {
       </header>
       <div id="mainSect">
         {renderComponent()}
-        {' '}
         {/* Render the selected component */}
       </div>
       <Footer />
