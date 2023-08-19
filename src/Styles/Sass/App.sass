@@ -3,6 +3,7 @@
 *
     margin: 0
     padding: 0
+
 body
     background: #71a5de
     font-size: 14px
@@ -11,11 +12,23 @@ body
     justify-content: center
     align-items: stretch
     white-space: nowrap
-    h2, span,button, h3,.quote
+    h2, span, h3
         color: $fontColor
         font-weight: 600
         font-size: 1em
+button
+    @include button
+    flex: 0 1 25%
+    font-weight: 600
+    font-size: 1em
 
+.quote
+    white-space: break-spaces
+    margin: 1rem 3rem
+    font-style: italic
+    color: $fontColor
+    font-weight: 600
+    font-size: 1em
 .App
     @include columnFlex
     justify-content: center
@@ -40,19 +53,8 @@ nav
     div
         @include rowFlex
         align-items: center
-        // margin-right: 1.5rem
         gap: 1rem
 
-// .dayDate
-//     @include smlInterP
-//     font-weight: 600
-//     align-self: flex-end
-//     margin-right: .4rem
-.quote
-
-    white-space: break-spaces
-    margin: 1rem 3rem
-    font-style: italic
 .author
     margin-top: .3rem
     font-weight: 700
@@ -99,10 +101,6 @@ nav
 
     &:focus
         outline: 0
-
-button
-    @include button
-    flex: 0 1 25%
 
 .link
     @include link

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +15,40 @@ body {
   align-items: stretch;
   white-space: nowrap;
 }
-body h2, body span, body button, body h3, body .quote {
+
+body h2,
+body span,
+body h3 {
+  color: #002d67;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+button {
+  transition: all 0.5s;
+  border-radius: 4px;
+  color: #002d67 !important;
+  background-color: #c2e2ea !important;
+  cursor: pointer;
+  text-align: center;
+  flex: 0 1 25%;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+button:active {
+  transform: scale(0.96);
+  background: #72bbce !important;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.quote {
+  white-space: break-spaces;
+  margin: 1rem 3rem;
+  font-style: italic;
   color: #002d67;
   font-weight: 600;
   font-size: 1em;
@@ -46,17 +80,12 @@ nav {
   padding: 0.2rem 0.5rem;
   align-self: stretch;
 }
+
 .navBar div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-}
-
-.quote {
-  white-space: break-spaces;
-  margin: 1rem 3rem;
-  font-style: italic;
 }
 
 .author {
@@ -108,27 +137,12 @@ nav {
   padding: 0.5rem;
   color: #aecbeb;
 }
+
 #CalcInput:active {
   border: none;
 }
-#CalcInput:focus {
-  outline: 0;
-}
 
-button {
-  transition: all 0.5s;
-  border-radius: 4px;
-  color: #002d67 !important;
-  background-color: #c2e2ea !important;
-  cursor: pointer;
-  text-align: center;
-  flex: 0 1 25%;
-}
-button:active {
-  transform: scale(0.96);
-  background: #72bbce !important;
-}
-button:focus {
+#CalcInput:focus {
   outline: 0;
 }
 
@@ -138,14 +152,15 @@ button:focus {
   color: blue;
   cursor: pointer;
   border: none;
-  background-color: none;
   background: none !important;
 }
+
 .link:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 .link:focus {
   outline: 0;
 }
@@ -171,19 +186,21 @@ footer {
   padding: 0.2rem;
   border: 2px solid #72bbce;
 }
+
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
   color: blue;
   cursor: pointer;
   border: none;
-  background-color: none;
 }
+
 footer a:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 footer a:focus {
   outline: 0;
 }
@@ -192,17 +209,18 @@ footer a:focus {
   body {
     font-size: 18px;
   }
+
   .navBar {
     padding: 0.2rem 1.5rem;
   }
+
   #CalculatorContainer {
     margin: 3rem;
   }
 }
+
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
 }
-
-/*# sourceMappingURL=App.css.map */

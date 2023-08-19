@@ -30,7 +30,6 @@ function QuoteApi() {
           setIsLoading(false);
         });
     };
-
     fetchData();
   }, [setQuotes, setIsLoading]);
 
@@ -54,54 +53,3 @@ function QuoteApi() {
 }
 
 export default QuoteApi;
-
-// import { useEffect } from 'react';
-
-// useEffect(() => {
-//   const GetData = async () => {
-//     const category = 'success';
-//     const apiKey = 'HDkAqbGgWzD4ApoIUqCl1Q==77tdi7Q7T8rjLfPB';
-
-//     setIsLoading(true);
-
-//     fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
-//       method: 'GET',
-//       headers: {
-//         'X-Api-Key': apiKey,
-//         'Content-Type': 'application/json',
-//       },
-//     })
-//       .then((response) => response.json())
-//       .then(setData(response))
-//       .catch((error) => {
-//         setHasError(true);
-//         console.error('Error:', error);
-//       });
-//     setIsLoading(false);
-//   };
-//   GetData();
-// },[setData, setIsLoading]);
-
-// const GetData = async () => {
-//   const category = 'success';
-//   const apiKey = 'HDkAqbGgWzD4ApoIUqCl1Q==77tdi7Q7T8rjLfPB';
-
-//   setIsLoading(true);
-
-//   fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
-//     method: 'GET',
-//     headers: {
-//       'X-Api-Key': apiKey,
-//       'Content-Type': 'application/json',
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then(setData(response))
-//     .catch((error) => {
-//       setHasError(true);
-//       console.error('Error:', error);
-//     });
-//   setIsLoading(false);
-// };
-// GetData();
-// export default GetData;
