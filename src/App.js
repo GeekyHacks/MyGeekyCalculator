@@ -15,7 +15,13 @@ function App() {
     if (resourceType === 'Contact') {
       return <Contact />;
     }
-    return <Calculator />;
+    return (
+      <div className="mainSect">
+        {' '}
+        <Calculator />
+        <QuoteApi />
+      </div>
+    );
   };
 
   return (
@@ -40,9 +46,9 @@ function App() {
           </div>
         </nav>
       </header>
-      <div id="mainSect">
-        {renderComponent()}
+      <div>
         {/* Render the selected component */}
+        {renderComponent()}
       </div>
       <Footer />
     </>

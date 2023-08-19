@@ -94,11 +94,12 @@ nav {
   font-style: oblique;
 }
 
-#mainSect {
+.mainSect {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+  gap: 2rem;
 }
 
 .ContactComponent {
@@ -110,6 +111,7 @@ nav {
 }
 
 #CalculatorContainer {
+  margin-top: 2rem;
   width: 250px;
   height: 250px;
   display: flex;
