@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+conosletest.js
+
+Header.js
+
 # testing
 /coverage
 
