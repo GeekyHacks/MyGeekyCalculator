@@ -57,8 +57,10 @@ nav
 
     div
         @include rowFlex
-        align-items: center
+        align-items: center !important
         gap: 1rem
+        span
+            align-self: center !important
 
 .author
     margin-top: .3rem
@@ -75,13 +77,13 @@ nav
     white-space: normal !important
     margin: 2rem 3rem
     h2
-        font-size: 1.2rem
+        font-size: 1.2em
         font-weight: 600
     p
-        font-size: 1rem
+        font-size: 1em
         margin-left: .5rem
     ol li
-        font-size: 1rem
+        font-size: 1em
         margin-left: 3rem
 .ContactComponent
     @include columnFlex
@@ -157,3 +159,6 @@ footer
 @media (min-width: 999px)
     body
         font-size: 25px
+@media (min-width:1200px)
+    body
+        font-size: 30px

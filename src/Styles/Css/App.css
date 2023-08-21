@@ -81,8 +81,11 @@ nav {
 .navBar div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center !important;
   gap: 1rem;
+}
+.navBar div span {
+  align-self: center !important;
 }
 
 .author {
@@ -105,15 +108,15 @@ nav {
   margin: 2rem 3rem;
 }
 .HomeComponent h2 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 600;
 }
 .HomeComponent p {
-  font-size: 1rem;
+  font-size: 1em;
   margin-left: 0.5rem;
 }
 .HomeComponent ol li {
-  font-size: 1rem;
+  font-size: 1em;
   margin-left: 3rem;
 }
 
@@ -229,6 +232,11 @@ footer a:focus {
 @media (min-width: 999px) {
   body {
     font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 30px;
   }
 }
 
