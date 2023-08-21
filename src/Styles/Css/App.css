@@ -6,7 +6,7 @@
 
 body {
   background: #71a5de;
-  font-size: 14px;
+  font-size: 10px;
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
@@ -71,8 +71,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   border: 2px solid #72bbce;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem;
   align-self: stretch;
+}
+.navBar h2 {
+  font-weight: 700 !important;
+  font-size: 1em;
 }
 .navBar div {
   display: flex;
@@ -90,9 +94,27 @@ nav {
 .mainSect {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.HomeComponent {
+  text-align: left;
+  white-space: normal !important;
+  margin: 2rem 3rem;
+}
+.HomeComponent h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.HomeComponent p {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.HomeComponent ol li {
+  font-size: 1rem;
+  margin-left: 3rem;
 }
 
 .ContactComponent {

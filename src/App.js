@@ -1,57 +1,13 @@
-import React, { useState } from 'react';
-import QuoteApi from './components/NinjaAPI';
-import Contact from './components/Contact';
-import Calculator from './components/Calculator';
 import Footer from './components/Footer';
 import './Styles/Css/App.css';
+import FullWebsite from './components/FullWebsite';
 
 function App() {
-  const [resourceType, setResourceType] = useState('Calculator');
-
-  const renderComponent = () => {
-    if (resourceType === 'QuoteApi') {
-      return <QuoteApi />;
-    }
-    if (resourceType === 'Contact') {
-      return <Contact />;
-    }
-    return (
-      <div className="mainSect">
-        {' '}
-        <Calculator />
-        <QuoteApi />
-      </div>
-    );
-  };
-
   return (
-    <>
-      <header>
-        <nav>
-          <div className="navBar">
-            <h2>Geeky Calculator</h2>
-            <div>
-              <button type="button" className="link" id="listBtn" onClick={() => setResourceType('QuoteApi')}>
-                Quotes
-              </button>
-              <span>|</span>
-              <button type="button" className="link" id="addNewBook" onClick={() => setResourceType('Calculator')}>
-                Calculator
-              </button>
-              <span>|</span>
-              <button type="button" className="link" id="addNewBook" onClick={() => setResourceType('Contact')}>
-                Contact
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div>
-        {/* Render the selected component */}
-        {renderComponent()}
-      </div>
+    <div className="App">
+      <FullWebsite />
       <Footer />
-    </>
+    </div>
   );
 }
 
