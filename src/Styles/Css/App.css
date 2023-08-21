@@ -14,6 +14,7 @@ body {
   align-items: stretch;
   white-space: nowrap;
 }
+
 body h2, body span, body h3 {
   color: #002d67;
   font-weight: 600;
@@ -31,10 +32,12 @@ button {
   font-weight: 600;
   font-size: 1em;
 }
+
 button:active {
   transform: scale(0.96);
   background: #72bbce !important;
 }
+
 button:focus {
   outline: 0;
 }
@@ -74,16 +77,19 @@ nav {
   padding: 0.25rem;
   align-self: stretch;
 }
+
 .navBar h2 {
   font-weight: 700 !important;
   font-size: 1em;
 }
+
 .navBar div {
   display: flex;
   flex-direction: row;
   align-items: center !important;
   gap: 1rem;
 }
+
 .navBar div span {
   align-self: center !important;
 }
@@ -107,14 +113,17 @@ nav {
   white-space: normal !important;
   margin: 2rem 3rem;
 }
+
 .HomeComponent h2 {
   font-size: 1.2em;
   font-weight: 600;
 }
+
 .HomeComponent p {
   font-size: 1em;
   margin-left: 0.5rem;
 }
+
 .HomeComponent ol li {
   font-size: 1em;
   margin-left: 3rem;
@@ -157,9 +166,11 @@ nav {
   padding: 0.5rem;
   color: #aecbeb;
 }
+
 #CalcInput:active {
   border: none;
 }
+
 #CalcInput:focus {
   outline: 0;
 }
@@ -172,11 +183,13 @@ nav {
   border: none;
   background: none !important;
 }
+
 .link:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 .link:focus {
   outline: 0;
 }
@@ -202,6 +215,7 @@ footer {
   padding: 0.2rem;
   border: 2px solid #72bbce;
 }
+
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
@@ -209,11 +223,13 @@ footer a {
   cursor: pointer;
   border: none;
 }
+
 footer a:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 footer a:focus {
   outline: 0;
 }
@@ -222,18 +238,22 @@ footer a:focus {
   body {
     font-size: 18px;
   }
+
   .navBar {
     padding: 0.2rem 1.5rem;
   }
+
   #CalculatorContainer {
     margin: 3rem;
   }
 }
+
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
 }
+
 @media (min-width: 1200px) {
   body {
     font-size: 30px;
