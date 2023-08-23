@@ -1,27 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import QuoteApi from './components/NinjaAPI';
+import Contact from './components/Contact';
+import Calculator from './components/Calculator';
+import Footer from './components/Footer';
+import './Styles/Css/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="fullWebsite">
+      <div className="App">
+        <nav className="navBar">
+          <h2>Geeky Calculator</h2>
+          <div>
+            <Link className="link" to="/MyGeekyCalculator/home">
+              Home
+            </Link>
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/calculator">
+              Calculator
+            </Link>
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/quotes">
+              Quotes
+            </Link>
+
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/contact">
+              Contact
+            </Link>
+          </div>
+        </nav>
+
+        <Routes>
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/MyGeekyCalculator/" element={<Home />} />
+          <Route path="/MyGeekyCalculator/calculator" element={<Calculator />} />
+          <Route path="/MyGeekyCalculator/quotes" element={<QuoteApi />} />
+          <Route path="/MyGeekyCalculator/contact" element={<Contact />} />
+          <Route path="/MyGeekyCalculator/home" element={<Home />} />
+          <Route path="/MyGeekyCalculator/*" element={<div className="notFound"> Page not found!! </div>} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }

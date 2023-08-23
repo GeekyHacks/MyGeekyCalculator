@@ -1,0 +1,191 @@
+@import global
+
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+
+body
+    background: #71a5de
+    font-size: 10px
+    padding: .2rem
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    white-space: nowrap
+
+    h2, span, h3
+        color: $fontColor
+        font-weight: 600
+        font-size: 1em
+button
+    @include button
+    flex: 0 1 25%
+    font-weight: 600
+    font-size: 1em
+
+.fullWebsite
+    @include columnFlex
+    justify-content: space-evenly
+    align-items: stretch
+    gap: 2rem
+
+.quote
+    white-space: break-spaces
+    margin: 2rem 3rem
+    font-style: italic
+    color: $fontColor
+    font-weight: 600
+    font-size: 1em
+
+.App
+    @include columnFlex
+    justify-content: center
+    align-items: center
+
+nav
+    @include columnFlex
+    padding: .2rem
+    gap: .2rem
+    justify-content: center
+    align-self: stretch
+
+.navBar
+    @include rowFlex
+    justify-content: space-between
+    align-items: center
+    border: 2px solid $secondarycolor
+    padding: .25rem
+    align-self: stretch
+
+    h2
+        font-weight: 700 !important
+        font-size: 1em
+
+    div
+        @include rowFlex
+        align-items: center !important
+        gap: 1rem
+
+        span
+            align-self: center !important
+
+.author
+    margin-top: .3rem
+    font-weight: 700
+    font-style: oblique
+
+.mainSect
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    gap: 2rem
+
+.HomeComponent
+    text-align: left
+    white-space: normal !important
+    margin: 2rem 3rem
+
+    h2
+        font-size: 1.2em
+        font-weight: 600
+
+    p
+        font-size: 1em
+        margin-left: .5rem
+
+    ol li
+        font-size: 1em
+        margin-left: 3rem
+.notFound
+    margin: 3rem auto
+    border-radius: 4px
+    padding: 4rem
+    font-size: 2em
+    font-weight: 800
+    color: white
+    background: $secondarycolor
+
+.ContactComponent
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    margin: 2rem
+
+#CalculatorContainer
+    margin-top: 2rem
+    max-width: 250px
+    max-height: 400px
+    @include columnFlex
+    justify-content: stretch
+    align-items: stretch
+    box-shadow: $box-shadow
+    background-color: #aecbeb
+    border-radius: 4px
+    gap: .1rem
+    padding: .3rem
+
+::placeholder
+    color: #aecbeb
+    font-weight: 600
+
+#CalcInput
+    flex: 0 1 11%
+    text-align: right
+    border-radius: 4px
+    border: none
+    background: #335c81
+    padding: .5rem
+    color: #aecbeb
+
+    &:active
+        border: none
+
+    &:focus
+        outline: 0
+
+.link
+    @include link
+    background: none !important
+    color: $fontColor
+
+#Btns
+    flex: 1
+    display: flex
+    flex-wrap: wrap
+
+.operator
+    background: #f5b82e !important
+
+#zero
+    flex: 0 1 50%
+
+footer
+    position: relative
+    top: auto
+    bottom: 0
+    padding: .2rem
+    border: 2px solid $secondarycolor
+
+    a
+        @include link
+        color: blue
+
+@media ( min-width: 768px  )
+    body
+
+        font-size: 18px
+    .navBar
+        
+        padding: .2rem 1.5rem
+
+    #CalculatorContainer
+        margin: 3rem
+
+@media (min-width: 999px)
+    body
+        font-size: 25px
+
+@media (min-width:1200px)
+    body
+        font-size: 30px
