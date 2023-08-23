@@ -34,12 +34,12 @@ function App() {
 
         <Routes>
           {/* <Route index element={<Home />} /> */}
-          <Route path="MyGeekyCalculator/" element={<Home />} />
-          <Route path="MyGeekyCalculator/calculator" element={<Calculator />} />
-          <Route path="MyGeekyCalculator/quotes" element={<QuoteApi />} />
-          <Route path="MyGeekyCalculator/contact" element={<Contact />} />
-          <Route path="MyGeekyCalculator/home" element={<Home />} />
-          <Route path="MyGeekyCalculator/*" element={<div className="notFound"> Page not found!! </div>} />
+          <Route path="/MyGeekyCalculator/" element={<Home />} />
+          <Route path="/MyGeekyCalculator/calculator" element={<Calculator />} />
+          <Route path="/MyGeekyCalculator/quotes" element={<QuoteApi />} />
+          <Route path="/MyGeekyCalculator/contact" element={<Contact />} />
+          <Route path="/MyGeekyCalculator/home" element={<Home />} />
+          <Route path="/MyGeekyCalculator/*" element={<div className="notFound"> Page not found!! </div>} />
         </Routes>
       </div>
       <Footer />
