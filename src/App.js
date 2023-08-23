@@ -13,20 +13,20 @@ function App() {
         <nav className="navBar">
           <h2>Geeky Calculator</h2>
           <div>
-            <Link className="link" to="/MyGeekyCalculator/home">
+            <Link className="link" to="/home">
               Home
             </Link>
             <span>|</span>
-            <Link className="link" to="/MyGeekyCalculator/calculator">
+            <Link className="link" to="/calculator">
               Calculator
             </Link>
             <span>|</span>
-            <Link className="link" to="/MyGeekyCalculator/quotes">
+            <Link className="link" to="/quotes">
               Quotes
             </Link>
 
             <span>|</span>
-            <Link className="link" to="/MyGeekyCalculator/contact">
+            <Link className="link" to="/contact">
               Contact
             </Link>
           </div>
