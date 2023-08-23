@@ -39,7 +39,7 @@ function App() {
           <Route path="/quotes" element={<QuoteApi />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/*" element={<div className='notFound'> Page not found!! </div>} />
+          <Route path="/*" element={<div className="notFound"> Page not found!! </div>} />
         </Routes>
       </div>
       <Footer />
