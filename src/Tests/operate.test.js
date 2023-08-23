@@ -1,7 +1,7 @@
 import operate from '../logic/operate';
 
 describe('operate', () => {
-  let numberOne = 10;
+  const numberOne = 10;
   let numberTwo = 5;
 
   describe('Unknown Operation', () => {
