@@ -13,6 +13,10 @@ function App() {
         <nav className="navBar">
           <h2>Geeky Calculator</h2>
           <div>
+            <Link className="link" to="/home">
+              Home
+            </Link>
+            <span>|</span>
             <Link className="link" to="/calculator">
               Calculator
             </Link>
@@ -29,14 +33,15 @@ function App() {
         </nav>
 
         <Routes>
-          <Route index element={<Home />} />
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/quotes" element={<QuoteApi />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/*" element={<div className='notFound'> Page not found!! </div>} />
         </Routes>
       </div>
-
       <Footer />
     </div>
   );
