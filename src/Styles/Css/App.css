@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -142,8 +142,8 @@ nav {
 
 #CalculatorContainer {
   margin-top: 2rem;
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -262,5 +262,3 @@ footer a:focus {
     font-size: 30px;
   }
 }
-
-/*# sourceMappingURL=App.css.map */
