@@ -13,6 +13,7 @@ body
     justify-content: center
     align-items: stretch
     white-space: nowrap
+    
     h2, span, h3
         color: $fontColor
         font-weight: 600
@@ -22,6 +23,7 @@ button
     flex: 0 1 25%
     font-weight: 600
     font-size: 1em
+
 .fullWebsite
     @include columnFlex
     justify-content: space-evenly
@@ -35,6 +37,7 @@ button
     color: $fontColor
     font-weight: 600
     font-size: 1em
+
 .App
     @include columnFlex
     justify-content: center
@@ -45,7 +48,6 @@ nav
     padding: .2rem
     gap: .2rem
     justify-content: center
-
     align-self: stretch
 
 .navBar
@@ -64,6 +66,7 @@ nav
         @include rowFlex
         align-items: center !important
         gap: 1rem
+
         span
             align-self: center !important
 
@@ -77,16 +80,20 @@ nav
     justify-content: center
     align-items: center
     gap: 2rem
+
 .HomeComponent
     text-align: left
     white-space: normal !important
     margin: 2rem 3rem
+
     h2
         font-size: 1.2em
         font-weight: 600
+
     p
         font-size: 1em
         margin-left: .5rem
+
     ol li
         font-size: 1em
         margin-left: 3rem
@@ -150,13 +157,17 @@ footer
     bottom: 0
     padding: .2rem
     border: 2px solid $secondarycolor
+
     a
         @include link
+        color: blue
 
 @media ( min-width: 768px  )
     body
+
         font-size: 18px
     .navBar
+        
         padding: .2rem 1.5rem
 
     #CalculatorContainer
@@ -165,6 +176,7 @@ footer
 @media (min-width: 999px)
     body
         font-size: 25px
+
 @media (min-width:1200px)
     body
         font-size: 30px
