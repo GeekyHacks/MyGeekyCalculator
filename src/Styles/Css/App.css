@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 body {
   background: #71a5de;
-  font-size: 14px;
+  font-size: 10px;
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
@@ -14,7 +16,10 @@ body {
   align-items: stretch;
   white-space: nowrap;
 }
-body h2, body span, body h3 {
+
+body h2,
+body span,
+body h3 {
   color: #002d67;
   font-weight: 600;
   font-size: 1em;
@@ -31,17 +36,27 @@ button {
   font-weight: 600;
   font-size: 1em;
 }
+
 button:active {
   transform: scale(0.96);
   background: #72bbce !important;
 }
+
 button:focus {
   outline: 0;
 }
 
+.fullWebsite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2rem;
+}
+
 .quote {
   white-space: break-spaces;
-  margin: 1rem 3rem;
+  margin: 2rem 3rem;
   font-style: italic;
   color: #002d67;
   font-weight: 600;
@@ -52,8 +67,7 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  gap: 3rem;
+  align-items: center;
 }
 
 nav {
@@ -71,14 +85,24 @@ nav {
   justify-content: space-between;
   align-items: center;
   border: 2px solid #72bbce;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem;
   align-self: stretch;
 }
+
+.navBar h2 {
+  font-weight: 700 !important;
+  font-size: 1em;
+}
+
 .navBar div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center !important;
   gap: 1rem;
+}
+
+.navBar div span {
+  align-self: center !important;
 }
 
 .author {
@@ -90,9 +114,40 @@ nav {
 .mainSect {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.HomeComponent {
+  text-align: left;
+  white-space: normal !important;
+  margin: 2rem 3rem;
+}
+
+.HomeComponent h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.HomeComponent p {
+  font-size: 1em;
+  margin-left: 0.5rem;
+}
+
+.HomeComponent ol li {
+  font-size: 1em;
+  margin-left: 3rem;
+}
+
+.notFound {
+  margin: 3rem auto;
+  border-radius: 4px;
+  padding: 4rem;
+  font-size: 2em;
+  font-weight: 800;
+  color: white;
+  background: #72bbce;
 }
 
 .ContactComponent {
@@ -100,13 +155,13 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 #CalculatorContainer {
   margin-top: 2rem;
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -132,9 +187,11 @@ nav {
   padding: 0.5rem;
   color: #aecbeb;
 }
+
 #CalcInput:active {
   border: none;
 }
+
 #CalcInput:focus {
   outline: 0;
 }
@@ -142,16 +199,18 @@ nav {
 .link {
   transition: all 0.5s;
   opacity: 0.6;
-  color: blue;
   cursor: pointer;
   border: none;
   background: none !important;
+  color: #002d67;
 }
+
 .link:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 .link:focus {
   outline: 0;
 }
@@ -177,18 +236,21 @@ footer {
   padding: 0.2rem;
   border: 2px solid #72bbce;
 }
+
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
-  color: blue;
   cursor: pointer;
   border: none;
+  color: blue;
 }
+
 footer a:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #002d67 !important;
 }
+
 footer a:focus {
   outline: 0;
 }
@@ -197,17 +259,24 @@ footer a:focus {
   body {
     font-size: 18px;
   }
+
   .navBar {
     padding: 0.2rem 1.5rem;
   }
+
   #CalculatorContainer {
     margin: 3rem;
   }
 }
+
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
 }
 
-/*# sourceMappingURL=App.css.map */
+@media (min-width: 1200px) {
+  body {
+    font-size: 30px;
+  }
+}

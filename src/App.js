@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
 import QuoteApi from './components/NinjaAPI';
 import Contact from './components/Contact';
 import Calculator from './components/Calculator';
@@ -6,52 +7,43 @@ import Footer from './components/Footer';
 import './Styles/Css/App.css';
 
 function App() {
-  const [resourceType, setResourceType] = useState('Calculator');
-
-  const renderComponent = () => {
-    if (resourceType === 'QuoteApi') {
-      return <QuoteApi />;
-    }
-    if (resourceType === 'Contact') {
-      return <Contact />;
-    }
-    return (
-      <div className="mainSect">
-        {' '}
-        <Calculator />
-        <QuoteApi />
-      </div>
-    );
-  };
-
   return (
-    <>
-      <header>
-        <nav>
-          <div className="navBar">
-            <h2>Geeky Calculator</h2>
-            <div>
-              <button type="button" className="link" id="listBtn" onClick={() => setResourceType('QuoteApi')}>
-                Quotes
-              </button>
-              <span>|</span>
-              <button type="button" className="link" id="addNewBook" onClick={() => setResourceType('Calculator')}>
-                Calculator
-              </button>
-              <span>|</span>
-              <button type="button" className="link" id="addNewBook" onClick={() => setResourceType('Contact')}>
-                Contact
-              </button>
-            </div>
+    <div className="fullWebsite">
+      <div className="App">
+        <nav className="navBar">
+          <h2>Geeky Calculator</h2>
+          <div>
+            <Link className="link" to="/MyGeekyCalculator/home">
+              Home
+            </Link>
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/calculator">
+              Calculator
+            </Link>
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/quotes">
+              Quotes
+            </Link>
+
+            <span>|</span>
+            <Link className="link" to="/MyGeekyCalculator/contact">
+              Contact
+            </Link>
           </div>
         </nav>
-      </header>
-      <div>
-        {/* Render the selected component */}
-        {renderComponent()}
+
+        <Routes>
+          {/* <Route index element={<Home />} /> */}
+          <Route path="/MyGeekyCalculator/" element={<Home />} />
+          <Route path="/MyGeekyCalculator/calculator" element={<Calculator />} />
+          <Route path="/MyGeekyCalculator/quotes" element={<QuoteApi />} />
+          <Route path="/MyGeekyCalculator/contact" element={<Contact />} />
+          <Route path="/MyGeekyCalculator/home" element={<Home />} />
+          <Route path="/MyGeekyCalculator/*" element={<div className="notFound"> Page not found!! </div>} />
+        </Routes>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
