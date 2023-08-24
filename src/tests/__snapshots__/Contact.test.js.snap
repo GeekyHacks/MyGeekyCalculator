@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Contact correctly 1`] = `
+<div>
+  <div
+    class="ContactComponent"
+  >
+    <h2>
+      Contact Information
+    </h2>
+    <h3>
+      Reach out to us whenever you have any question or wanna say Hello!
+    </h3>
+    <ul>
+      <li>
+        Author:geekyhacks22@gmail.com
+      </li>
+      <li>
+        Phone:+967777759022
+      </li>
+      <li>
+        Adress:Zaid Street, Sanaa, Yemen
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders Footer correctly 1`] = `
+<div>
+  <div>
+    <footer>
+      <h3
+        class="copyRights"
+      >
+        Copy rights reserved to
+        <a>
+           GeekyHacks
+        </a>
+      </h3>
+    </footer>
+  </div>
+</div>
+`;
